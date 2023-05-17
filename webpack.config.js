@@ -2,12 +2,16 @@ const path = require('path');
 const entryPath = path.join(__dirname, 'client', '/index.js');
 
 module.exports = {
-  mode: 'development',
-  entry: [entryPath],
+  mode: 'production',
+  entry: './client/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[name].chunk.js',
+  },
+  optimization: {
+    usedExports: true, // Enable tree shaking
+    minimize: true, // Enable code minification (optional)
   },
   devtool: 'source-map',
   module: {
@@ -27,25 +31,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        ],
+
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
       {
         test: /\.svg$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        ],
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
     ],
   },
