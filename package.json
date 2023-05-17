@@ -4,12 +4,10 @@
   "description": "Personal site which will contain information necessary to learn my background, skillset, and ways to contact me.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "build:dev": "npm run build -- --watch --mode=development",
-    "dev": "webpack serve",
-    "start": "node server",
-    "start:dev": "npm run build:dev & npm run start-server",
-    "start-server": "JWT=shh nodemon server -e html,js,scss --ignore public --ignore client",
+    "build": "webpack -w",
+    "start": "webpack-dev-server --port 2000 --hot",
+    "start:dev": "npm run build & npm run start:server & npm start",
+    "start:server": "nodemon server",
     "test": "test"
   },
   "repository": {
