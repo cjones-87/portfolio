@@ -8,11 +8,12 @@ import Home from './components/Home';
 export default function App() {
   return (
     <div>
-      <Home />
+      <Routes />
+      {/* <Home />
       <AboutMe />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }

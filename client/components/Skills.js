@@ -1,5 +1,5 @@
 import React from 'react';
-import node from '/public/assets/nodejs2.png';
+import node from '/public/nodejs2.png';
 // import javascript from '/public/assets/javascript2.png';
 // import git from '/public/assets/git2.png';
 // import express from '/public/assets/express2.png';
