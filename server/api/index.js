@@ -7,6 +7,7 @@ router.use('/users', require('./users')); //all backend users related requests w
 router.use(function (req, res, next) {
   const err = Error('Not found.');
   err.status = 404;
+  console.log('why isnt this shit working', err.name, err);
   next(err);
 });
 
