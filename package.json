@@ -4,7 +4,7 @@
   "description": "Personal site which will contain information necessary to learn my background, skillset, and ways to contact me.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -w",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server --port 2000 --hot",
     "start:dev": "npm run build & npm run start:server & npm start",
     "start:server": "nodemon server",
