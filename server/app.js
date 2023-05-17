@@ -30,7 +30,7 @@ app.use('/api', require('./api'));
 
 //backend will serve up the index.html for any requests that don't match to an existing backend route
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 //error handling for any uncaught errors
