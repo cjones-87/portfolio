@@ -1,5 +1,5 @@
 const path = require('path');
-const entryPath = path.join(__dirname, 'client', 'index.js');
+const entryPath = path.join(__dirname, 'client', '/index.js');
 
 module.exports = {
   mode: 'development',

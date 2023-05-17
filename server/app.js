@@ -18,8 +18,8 @@ app.use(morgan('dev'));
 // }); //<== lines 15 thru 18 are responsible for using backend to capture static media files
 
 //setting up static middleware
-app.use(express.static(path.join(__dirname, '..', '/dist')));
-app.use(express.static(path.join(__dirname, '..', '/public')));
+app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //setting up parsing middleware
 app.use(bodyParser.json());
@@ -30,7 +30,7 @@ app.use('/api', require('./api'));
 
 //backend will serve up the index.html for any requests that don't match to an existing backend route
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 //error handling for any uncaught errors
