@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malcolmlearnstech/portfolio.git"
+    "url": "git+https://github.com/cjones-87/portfolio.git"
   },
   "author": "Malcolm M.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/malcolmlearnstech/portfolio/issues"
+    "url": "https:/github.com/cjones-87/portfolio/issues"
   },
-  "homepage": "https://github.com/malcolmlearnstech/portfolio#readme",
+  "homepage": "https://deluxe-puffpuff-a97a9c.netlify.app/",
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
