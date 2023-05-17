@@ -6,16 +6,18 @@ const app = require('./app');
 const port = process.env.PORT || 3000;
 
 //this block is syncing our database
-db.sync()
-  .then(function () {
-    console.log('Knock, knock');
-    console.log("Who's there");
+const init = async () => {
+  try {
+    await db.sync().then(() => {
+      console.log(
+        `Knock, knock...\nWho's there?\nYour server, listening on port ${port}`
+      );
 
-    //this block listens for server requests once we've synced the database
-    app.listen(port, () =>
-      console.log(`Your server, listening on port ${port}`)
-    );
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+      app.listen(port);
+    });
+  } catch (error) {
+    console.log('There was an error initializing the app');
+  }
+};
+
+init();
