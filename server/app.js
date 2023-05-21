@@ -19,8 +19,18 @@ app.use(morgan('dev'));
 
 //setting up static middleware
 app.use(express.static(path.join(__dirname, '..', 'dist')));
-app.use(express.static(path.join(__dirname, '..', 'public')));
 
+app.use(
+  express.static('dist', {
+    setHeaders: (res, path, stat) => {
+      if (path.endsWith('.js')) {
+        res.set('Content-Type', 'application/javascript');
+      }
+    },
+  })
+);
+
+app.use(express.static(path.join(__dirname, '..', 'public')));
 //setting up parsing middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

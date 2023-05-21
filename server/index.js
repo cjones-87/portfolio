@@ -3,7 +3,7 @@ const db = require('./db/database');
 
 //server that was created and used as the previous entry point is 'app.js'
 const app = require('./app');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3009;
 
 //this block is syncing our database
 const init = async () => {

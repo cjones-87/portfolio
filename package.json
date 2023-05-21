@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --port 2000 --hot",
+    "start": "webpack-dev-server --hot",
     "start:dev": "npm run build & npm run start:server & npm start",
     "start:server": "nodemon server",
     "test": "test"
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https:/github.com/cjones-87/portfolio/issues"
   },
-  "homepage": "https://deluxe-puffpuff-a97a9c.netlify.app/",
+  "homepage": "https://deluxe-puffpuff-a97a9c.netlify.app",
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",

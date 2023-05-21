@@ -1,9 +1,9 @@
 const path = require('path');
-const entryPath = path.join(__dirname, 'client', '/index.js');
+const entryPath = path.join(__dirname, 'client', 'index.js');
 
 module.exports = {
   mode: 'production',
-  entry: './client/index.js',
+  entry: entryPath,
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -14,6 +14,9 @@ module.exports = {
     minimize: true, // Enable code minification (optional)
   },
   devtool: 'source-map',
+  devServer: {
+    port: 3009,
+  },
   module: {
     rules: [
       {
@@ -26,11 +29,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: path.resolve(__dirname, 'client'),
+        include: path.join(__dirname, 'client'),
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ico)$/i,
 
         loader: 'file-loader',
         options: {

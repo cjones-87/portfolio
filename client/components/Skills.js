@@ -1,5 +1,5 @@
 import React from 'react';
-import node from '/public/nodejs2.png';
+// import node from '/public/nodejs2.png';
 // import javascript from '/public/assets/javascript2.png';
 // import git from '/public/assets/git2.png';
 // import express from '/public/assets/express2.png';
@@ -25,7 +25,7 @@ export default function Skills() {
 
           <div>
             <div>
-              <img src={node} alt="node js" />
+              {/* <img src={node} alt="node js" /> */}
               {/* <p>Node</p> */}
             </div>
           </div>
